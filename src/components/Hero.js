@@ -10,7 +10,7 @@ const HeroWrapper = styled.div`
 
 const StyledHeader = styled.header`
     
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
     text-transform: uppercase;
     position: relative;
