@@ -11,7 +11,8 @@ const Poland = () => {
         <div>
             <NavBar active="pl" />
             <Hero country="Polska" />
-            <NewsList country="pl" />
+            <NewsList market="pl-PL" />
+
         </div>
     )
 }

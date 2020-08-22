@@ -9,7 +9,7 @@ const UnitedStates = () => {
         <div>
             <NavBar active="us" />
             <Hero country="Stany Zjednoczone" />
-            <NewsList country="us" />
+            <NewsList market="en-US" />
         </div>
     )
 }

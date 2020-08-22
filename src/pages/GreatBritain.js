@@ -9,7 +9,7 @@ const GreatBritain = () => {
         <div>
             <NavBar active="uk" />
             <Hero country="Wielka Brytania" />
-            <NewsList country="gb" />
+            <NewsList market="en-GB" />
         </div>
     )
 }

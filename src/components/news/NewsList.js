@@ -9,23 +9,30 @@ const NewsListWrapper = styled.div`
 `
 
 
-const NewsList = ({ country }) => {
+const NewsList = ({ market }) => {
     const [newsList, setNewsList] = useState([]);
-    const requestURL = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=055aefa861c14f919537a61a5473e5a3`;
+    const requestURL = `https://bing-news-search1.p.rapidapi.com/news?mkt=${market}&safeSearch=Off&textFormat=Raw`;
+
 
     useEffect(() => {
         async function getNewsList() {
-            const response = await axios.get(requestURL);
-            console.log(response.data.articles);
-            setNewsList(response.data.articles);
+            const response = await axios.get(requestURL, {
+                "headers": {
+                    "x-rapidapi-host": "bing-news-search1.p.rapidapi.com",
+                    "x-rapidapi-key": "ba75fb4913msh4bc6d04b5a49f57p1fe5acjsn4ab491719aed",
+                    "x-bingapis-sdk": "true"
+                }
+            });
+
+            setNewsList(response.data.value);
         };
         getNewsList();
     }, []);
 
     return (
         <NewsListWrapper>
-            {newsList.map(({ publishedAt, title, description, url, urlToImage }) =>
-                <NewsItem key={publishedAt} title={title} description={description} url={url} img={urlToImage} />)}
+            {newsList.map(({ datePublished, name, description, url, image }) =>
+                <NewsItem key={datePublished} title={name} description={description} url={url} img={image.thumbnail.contentUrl.replace('&pid=News', '')} />)}
             <NewsItem />
             <NewsItem />
         </NewsListWrapper>
