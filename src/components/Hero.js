@@ -7,8 +7,8 @@ const HeroWrapper = styled.div`
 `
 
 const StyledHeader = styled.header`
-    
-    font-size: 2em;
+    width: 100%;
+    font-size: 1.6em;
     text-align: center;
     text-transform: uppercase;
     position: relative;
@@ -19,9 +19,13 @@ const StyledHeader = styled.header`
         content: '';
         transform: translateX(-7px);
         height: 100%;
-        width: calc(2.5rem - 10px);
+        width: calc(2rem - 10px);
         background-color: #D20E0E; 
         z-index: -1;
+
+        @media only screen and (min-width: 820px){
+            width: 30px;
+        }
     }
 `
 

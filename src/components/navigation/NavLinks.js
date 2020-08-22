@@ -36,7 +36,7 @@ const StyledUl = styled.ul`
     }
     
 
-    @media only screen and (min-width: 768px){
+    @media only screen and (min-width: 769px){
         width: 50%;
         display: flex;
         justify-content: space-between;
