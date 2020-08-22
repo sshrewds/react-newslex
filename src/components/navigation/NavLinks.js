@@ -30,7 +30,7 @@ const StyledUl = styled.ul`
 
         li{
             padding-bottom: 30px;
-            font-size: 1.5em;
+            font-size: 1em;
             text-transform: uppercase;
         }
     }
@@ -40,6 +40,10 @@ const StyledUl = styled.ul`
         width: 50%;
         display: flex;
         justify-content: space-between;
+
+        li{
+            font-size: 0.6em;
+        }
     }
 
 `
@@ -65,7 +69,9 @@ const NavLinks = ({ active, isMenuOpen }) => {
 
     return (
         <StyledUl open={isMenuOpen}>
-            {links.map(({ id, name, url }) => <li key={id} style={{ fontWeight: id === active ? 'bold' : 'normal' }}><Link to={url}>{name}</Link></li>)
+            {links.map(({ id, name, url }) => <li key={id} >
+                <Link to={url} style={{ fontWeight: id === active ? 'bold' : 'normal' }}>{name}</Link>
+            </li>)
             }
         </StyledUl >
     )

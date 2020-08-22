@@ -2,13 +2,15 @@ import React, { useState } from 'react'
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import HamburgerMenu from './navigation/HamburgerMenu';
-import NavLinks from './navigation/NavLinks';
+import HamburgerMenu from './HamburgerMenu';
+import NavLinks from './NavLinks';
 
 const Nav = styled.div`
     width: 100vw;
     height: 10vh;
-    /* position: fixed; */
+    position: fixed;
+    top: 0;
+    left:0;
     background-color: white;
     z-index: 20;
     
@@ -22,7 +24,7 @@ const Nav = styled.div`
     }
     
     .container{
-        width: 90%;
+        width: 80vw;
         height: 100%;
         margin: auto;
         display: flex;
@@ -31,9 +33,13 @@ const Nav = styled.div`
         
 
         .logo{
-            font-size: 1.5em;
+            font-size: 26px;
             
         }
+
+        @media only screen and (min-width: 768px){
+        width: 80vw;
+    }
     }
 
 `
@@ -48,7 +54,7 @@ const NavBar = ({ active }) => {
         <Nav>
             <div className="container">
                 <div className="logo">
-                    <Link to='/'>NEWSlex</Link>
+                    <Link to='/' style={{ color: '#D20E0E' }}>NEWSlex</Link>
                 </div>
 
                 <HamburgerMenu isMenuOpen={isMenuOpen} toggleMenu={() => setIsMenuOpen(!isMenuOpen)} />

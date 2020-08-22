@@ -5,7 +5,11 @@ const HeroWrapper = styled.div`
     /* position: absolute;
     top: 20vh; */
     width: 80vw;
-    margin: 50px auto 0;
+    margin: 5em auto 0;
+
+    @media only screen and (min-width: 768px){
+        width: 80vw;
+    }
 `
 
 const StyledHeader = styled.header`
@@ -21,14 +25,14 @@ const StyledHeader = styled.header`
         content: '';
         transform: translateX(-7px);
         height: 100%;
-        width: 30px;
+        width: calc(2.5rem - 10px);
         background-color: #D20E0E; 
         z-index: -1;
     }
 `
 
 const StyledCountryName = styled.h1`
-    font-size: 2.5em;
+    font-size: 1.7em;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;

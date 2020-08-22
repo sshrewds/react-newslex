@@ -16,6 +16,7 @@ const Hamburger = styled.button`
     border: none;
     outline: none;
     background-color: transparent;
+    cursor: pointer;
 
     .hamburger-box{
         width: 30px;
