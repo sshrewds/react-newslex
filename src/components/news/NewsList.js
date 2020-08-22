@@ -11,7 +11,7 @@ const NewsListWrapper = styled.div`
 
 const NewsList = ({ country }) => {
     const [newsList, setNewsList] = useState([]);
-    const requestURL = `http://newsapi.org/v2/top-headlines?country=${country}&apiKey=055aefa861c14f919537a61a5473e5a3`;
+    const requestURL = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=055aefa861c14f919537a61a5473e5a3`;
 
     useEffect(() => {
         async function getNewsList() {
