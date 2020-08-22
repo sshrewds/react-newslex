@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import HamburgerMenu from './HamburgerMenu';
 import NavLinks from './NavLinks';
 
+
 const Nav = styled.div`
     width: 100vw;
     height: 10vh;
@@ -36,15 +37,9 @@ const Nav = styled.div`
             font-size: 26px;
             
         }
-
-        @media only screen and (min-width: 768px){
-        width: 80vw;
-    }
     }
 
 `
-
-
 
 const NavBar = ({ active }) => {
 

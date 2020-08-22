@@ -2,14 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const HeroWrapper = styled.div` 
-    /* position: absolute;
-    top: 20vh; */
     width: 80vw;
     margin: 5em auto 0;
-
-    @media only screen and (min-width: 768px){
-        width: 80vw;
-    }
 `
 
 const StyledHeader = styled.header`

@@ -3,17 +3,7 @@ import styled from 'styled-components'
 
 const NewsItemGrid = styled.div`
     width: 100%;
-    
     margin-bottom: 2em;
-    /* display: grid;
-    
-    grid-template-areas:    "img"
-                            "title"
-                            "desc"
-                            "btn";
-    grid-template-columns: 1fr;
-    grid-template-rows: 3fr 1fr 1.5fr 1fr; */
-    
     
     @media only screen and (min-width: 768px){
         height: 8em;
@@ -62,7 +52,6 @@ const NewsReadMoreBtn = styled.div`
         bottom: 0;
        }
        
-
        color: black;
        text-decoration: none;
 

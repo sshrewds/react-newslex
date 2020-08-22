@@ -6,10 +6,6 @@ import NewsItem from './NewsItem';
 const NewsListWrapper = styled.div`
     width: 80vw;
     margin: 3em auto 0;
-
-    @media only screen and (min-width: 768px){
-        width: 80vw;
-    }
 `
 
 
