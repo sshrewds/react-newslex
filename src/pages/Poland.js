@@ -5,8 +5,6 @@ import Hero from '../components/Hero'
 import NewsList from '../components/news/NewsList'
 
 const Poland = () => {
-
-
     return (
         <div>
             <NavBar active="pl" />

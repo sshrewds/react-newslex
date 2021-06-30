@@ -25,7 +25,6 @@ const NewsImage = styled.img`
     background-color: #888;
     
     object-fit: cover;
-    
 `
 
 const NewsTitle = styled.div`

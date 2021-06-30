@@ -9,7 +9,6 @@ const StyledUl = styled.ul`
     background-color: white;
     z-index: 20;
 
-
     @media only screen and (max-width: 768px){
         width: 100vw;
         height: 90vh;
@@ -18,13 +17,10 @@ const StyledUl = styled.ul`
         top: 10vh;
         left: 0;
 
-        
         flex-direction: column;
         align-items: center;
         padding-top: 50px;
 
-        
-        
         transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
         transition: transform .3s ease-in-out;
 
@@ -35,7 +31,6 @@ const StyledUl = styled.ul`
         }
     }
     
-
     @media only screen and (min-width: 769px){
         width: 50%;
         display: flex;

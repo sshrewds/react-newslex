@@ -8,11 +8,10 @@ const NewsListWrapper = styled.div`
     margin: 3em auto 0;
 `
 
-
 const NewsList = ({ market }) => {
     const [newsList, setNewsList] = useState([]);
     const requestURL = `https://bing-news-search1.p.rapidapi.com/news?mkt=${market}&safeSearch=Off&textFormat=Raw`;
-
+    const undefinedImageURL = 'https://dubsism.files.wordpress.com/2017/12/image-not-found.png';
 
     useEffect(() => {
         async function getNewsList() {
@@ -23,18 +22,19 @@ const NewsList = ({ market }) => {
                     "x-bingapis-sdk": "true"
                 }
             });
-
+            console.log(response);
             setNewsList(response.data.value);
         };
         getNewsList();
+        console.log(newsList);
     }, []);
 
     return (
         <NewsListWrapper>
-            {newsList.map(({ datePublished, name, description, url, image }) =>
-                <NewsItem key={datePublished} title={name} description={description} url={url} img={image.thumbnail.contentUrl.replace('&pid=News', '')} />)}
-            <NewsItem />
-            <NewsItem />
+            {newsList.map(({ datePublished, name, description, url, image }) =>{
+                const imgURL = image ? image.thumbnail.contentUrl.replace('&pid=News', '') : undefinedImageURL;
+                return <NewsItem key={datePublished} title={name} description={description} url={url} img={imgURL} />
+            } )}
         </NewsListWrapper>
     )
 }
