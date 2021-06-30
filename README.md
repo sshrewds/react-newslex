@@ -9,3 +9,5 @@ The news are being gathered by [Bing Search API](https://www.microsoft.com/en-us
 * React Router
 * Styled components
 * Axios
+
+Application can be previewed [here](https://newslex.netlify.app/)
